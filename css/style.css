@@ -83,12 +83,37 @@ ul {
     list-style: none;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/* REGOLE SITE-TOP */
+.site-top {
+    height:calc(100% - 80px);
+}
+
+
 /* REGOLE ASIDE */
 .aside-container {
     width:200px;
-    height:calc(100vh - 80px);
-    background-color: green;
-    flex-direction: column;
+    height: 100%;
+    background-color:#000000;
+    color: white;
 }
 
 .logo {
@@ -98,6 +123,11 @@ ul {
 .logo img {
    padding: 1rem;
 }
+
+.lists-container .main-list {
+    padding:1rem 0;
+}
+
 
 .lists-container .main-list li {
     padding: 0.2rem 1rem;
@@ -115,43 +145,73 @@ ul {
     opacity: 0.5;
   }
 
-.secondary-list {
-    min-height: 100px;
-    border: 1px dashed black;
-    overflow: auto;
-    /* flex-grow: 1; */
+.lists-container .secondary-list {
+    min-height: 50px;
+    padding: 1rem;
+}
+
+.lists-container .secondary-list ul li {
+    padding: 0.6rem 0;
+}
+
+.lists-container .secondary-list h3 {
+    margin-bottom: 0.4rem;
+}
+
+.lists-container .secondary-list i {
+    margin-right:0.5rem;
+    vertical-align: middle;
 }
 
 .nav-aside-bottom {
-    max-height: 50px;
+    height: 50px;
     border: 1px dashed black;
+    padding: 1rem;
 }
+
+.nav-aside-bottom img {
+    width: 10%;
+    vertical-align: middle;
+}
+
 
 /* REGOLE MAIN */
 .main-container {
     width: calc(100vw - 200px);
-    height:calc(100vh - 80px);
+    height: 100%;
     background-color:#141922;
-    position: relative;
+    color: white;
     padding-top: 60px;
     overflow:auto;
 }
 
 .call-to-action {
     width:calc(100% - 200px);
-    height: 60px;
+    /* height: 60px; */
     background-color: rgba(0,0,0,0.5);
     position:fixed;
     top: 0;
     right: 0;
     text-align: right;
     z-index: 5;
+    padding: 1.5rem 0;
+}
+
+.call-to-action a {
+    border: 1px solid white;
+    padding: 0.5rem 2.5rem;
+    border-radius: 30px;
+    margin-right: 0.5rem;
 }
 
 .menu-nav-main {
-    height: 50px;
-    background-color: orange;
-    
+    text-align: center; 
+}
+
+.menu-nav-main ul li {
+    display: inline-block;
+    padding: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .recently-played {
@@ -176,19 +236,45 @@ ul {
     margin-left: 0.2rem;
     margin-right: 0.2rem;
     min-height: 120px;
-    background-color: blueviolet;
-    border: 1px dashed black;
 }
 
-.card-photo {
-    height: 60%;
+.card .card-photo {
     border: 1px dashed black;
+    position: relative;
+}
+
+.card-container .card img {
+    width: 100%;
+    display: block;
+}
+
+.card:hover .overlay {
+    display: block;
+}
+
+.card-container .card .card-text h3 {
+    margin:0.5rem 0;
+    font-size:1rem;
+}
+
+.main-container h4 {
+    opacity: 0.5;
+    font-size: 0.8rem;
 }
 
 /* REGOLE SECTION PLAYER */
-.player-container {
+.site-bottom {
+    width: 100%;
     height: 80px;
-    background-color: yellow;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color:#282828;
+}
+
+.player-container {
+    justify-content: space-between; 
 }
 
 .player-container .song {
@@ -204,4 +290,12 @@ ul {
 .player-container .audio {
     width: 25%;
     border: 1px dashed black;
+}
+
+
+
+@media screen and (max-width:1100px) {
+    .recently-played .card {
+        width: calc((100% / 4) - 0.4rem);
+    }    
 }
