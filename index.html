@@ -11,11 +11,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <!-- INIZIO ASIDE -->
-        <div class="site-top flex">
-            <aside>
+    <body>       
+        <section>
+            <!-- INIZIO SECTION-TOP -->
+            <div class="app">
+                <!-- INIZIO ASIDE -->
                 <div class="aside-container">
+                    <div class="nav-aside-top">
                         <div class="logo">
                             <img src="img/logo.svg" alt="logo">
                         </div>
@@ -43,33 +45,34 @@
                                     <li>Nome Playlist</li>
                                 </ul>
                             </div>
-                        <div class="nav-aside-bottom">
-                            <span>
-                                <a href="#">
-                                    <img src="img/download.svg" alt="download">
-                                    Installa app
-                                </a>
-                            </span>
-                            <hr>
-                            <span>
-                                <a href="#">
-                                    <img src="img/profile.svg" alt="download">
-                                    Installa app
-                                </a>
-                            </span>
                         </div>
+                    </div>    
+                    <div class="nav-aside-bottom">
+                        <span>
+                            <a href="#">
+                                <img src="img/download.svg" alt="download">
+                                    Installa app
+                            </a>
+                        </span>
+                        <hr>
+                        <span>
+                            <a href="#">
+                                <img src="img/profile.svg" alt="download">
+                                    Installa app
+                            </a>
+                        </span>
+                    </div>
                 </div>
-            </aside>
+                <!-- FINE ASIDE -->
 
-            <!-- INIZIO MAIN -->
-            <main>
+                <!-- INIZIO MAIN -->
                 <div class="main-container">
                     <div class="call-to-action">
                         <a href="#">EFFETTUA L'UPGRADE</a>
                     </div>
                     <div class="menu-nav-main">
                         <ul>
-                            <a href="#"><li>IN EVIDENZA</li></a>
+                            <a href="#"><li class="active">IN EVIDENZA</li></a>
                             <a href="#"><li>PODCAST</li></a>
                             <a href="#"><li>CLASSIFICHE</li></a>
                             <a href="#"><li>GENERI E MOOD</li></a>
@@ -253,22 +256,53 @@
                         </div>
                     </div>
                 </div>
-            </main>
-        </div>
+            </div>
+        </section>
 
         <!-- INIZIO PLAYER -->
-        <div class="site-bottom" >
-            <section id="player">
-                <div class="player-container flex">
-                    <div class="song"></div>
-                    <div class="controller">
-                        <div class="controller-top"></div>
-                        <div class="controller-bottom"></div>
+        <section>
+            <div class="player-container flex">
+                <div class="song flex align-items-center">
+                    <img src="img/metal_lifting.jpg" alt="matel lifting">
+                    <div class="album-description">
+                        <h3>
+                            Heavy Metal
+                        </h3>
+                        <h4>
+                            Song Name
+                        </h4>
                     </div>
-                    <div class="audio"></div>
+                    <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                    </div>
                 </div>
-            </section>
-        </div>
-
+                <div class="controller">
+                    <div class="controller-top">
+                        <ul>
+                            <li><a href="#"></a><i class="fa-solid fa-shuffle fa-xs"></i></li>
+                            <li><a href="#"></a><i class="fa-solid fa-backward-step fa-xs"></i></li>
+                            <li class="bigger"><a href="#"></a><i class="fa-regular fa-circle-play fa-xs"></i></li>
+                            <li><a href="#"></a><i class="fa-solid fa-forward-step fa-xs"></i></li>
+                            <li><a href="#"></a><i class="fa-sharp fa-solid fa-rotate-right fa-xs"></i></li>
+                        </ul>    
+                    </div>
+                    <div class="controller-bottom flex">
+                        <div class="time-go">
+                            0:25
+                        </div>
+                        <div class="time-bar">
+                            <div class="time-start">
+                                <div class="time-start-point"></div>
+                            </div>
+                        </div>
+                        <div class="time-tot">
+                            4:35
+                        </div>
+                    </div>
+                </div>
+                <div class="audio">AUDIO</div>
+            </div>
+        </section>
     </body>
 </html>
