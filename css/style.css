@@ -94,6 +94,7 @@ a {
 section .app {
     height:calc(100vh - 80px);
     display: flex;
+    overflow: hidden;
 }
 
 
@@ -104,6 +105,7 @@ section .app {
     min-height: 400px;
     background-color:#000000;
     color: white;
+    overflow:hidden;
 }
 
 .nav-aside-top {
@@ -147,7 +149,7 @@ section .app {
 }
 
 .secondary-list {
-    padding: 1rem;
+    padding: 0 1rem;
     flex-direction: column;
     overflow: hidden;
 }
@@ -199,6 +201,30 @@ section .app {
     color: white;
     display: block;
 }
+
+/* Regole Hover aside */
+.secondary-list ul li:hover a {
+    color: white;
+}
+
+.secondary-list span:hover a {
+    color: white;
+}
+
+.main-list ul li:not(:first-child):hover {
+    border-left: 0.2rem solid #adff2f;
+    padding-left: 0.8rem;
+}
+
+.main-list ul li a:hover img {
+    opacity: 1;
+}
+
+.nav-aside-bottom .install:hover a {
+    color: white;
+}
+
+/* Fine hover aside */
 
 
 /* REGOLE MAIN */
@@ -463,6 +489,7 @@ section .player-container {
 
 /* X-SMALL */
 @media screen and (max-width:600px) {
+    
     .app .aside-container {
         width: 50px;
     }
@@ -498,5 +525,17 @@ section .player-container {
 
     .main-list .selected {
         border-left:none;
+    }
+
+    .nav-aside-bottom span {
+        display: none;
+    }
+
+    .nav-aside-bottom .install {
+        border: none;
+    }
+
+    .nav-aside-bottom img {
+        width: 100%;
     }
 }
