@@ -17,50 +17,61 @@
             <div class="app">
                 <!-- INIZIO ASIDE -->
                 <div class="aside-container">
-                    <div class="nav-aside-top">
+                    <div class="nav-aside-top flex">
                         <div class="logo">
-                            <img src="img/logo.svg" alt="logo">
+                            <a href="#"><img class="big-logo" src="img/logo.svg" alt="logo"></a>
+                            <a href="#"><img class="small-logo" src="img/logo-small.svg" alt="logo small"></a>
                         </div>
-                        <div class="lists-container">
-                            <div class="main-list">
-                                <ul>
-                                    <li class="selected"><a href="#"><img src="img/home.svg" alt="home"></a>Home</li>
-                                    <li><a href="#"><img src="img/search.svg" alt="search"></a>Cerca</li>
-                                    <li><a href="#"><img src="img/libreria.svg" alt="libreria"></a>La tua libreria</li>
-                                </ul>                            
-                            </div>
-                            <div class="secondary-list">
-                                <h3>
-                                    PLAYLIST
-                                </h3>
-                                <span>
-                                    <a href="#"><i class="fa-solid fa-square-plus fa-3x"></i>Crea Playlist</a>
-                                </span>
-                                <ul>
-                                    <li>Nome Playlist</li>
-                                    <li>Nome Playlist</li>
-                                    <li>Nome Playlist</li>
-                                    <li>Nome Playlist</li>
-                                    <li>Nome Playlist</li>
-                                    <li>Nome Playlist</li>
-                                </ul>
-                            </div>
+                        <div class="main-list">
+                            <ul>
+                                <li class="selected"><a href="#">
+                                    <img src="img/home.svg" alt="home">
+                                    <span>Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/search.svg" alt="search">
+                                    <span>Cerca</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/libreria.svg" alt="libreria">
+                                    <span>La tua libreria</span> 
+                                    </a>
+                                </li>
+                            </ul>                            
+                        </div>
+                        <div class="secondary-list flex">
+                            <h3>
+                                PLAYLIST
+                            </h3>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-square-plus fa-3x"></i>Crea Playlist</a>
+                            </span>
+                            <ul>
+                                <li><a href="#">Nome Playlist</li></a>
+                                <li><a href="#">Nome Playlist</li></a> 
+                                <li><a href="#">Nome Playlist</li></a> 
+                                <li><a href="#">Nome Playlist</li></a> 
+                                <li><a href="#">Nome Playlist</li></a> 
+                                <li><a href="#">Nome Playlist</li></a> 
+                                <li><a href="#">Nome Playlist</li></a>  
+                            </ul>
                         </div>
                     </div>    
                     <div class="nav-aside-bottom">
-                        <span>
+                        <div class="install">
                             <a href="#">
                                 <img src="img/download.svg" alt="download">
-                                    Installa app
+                                <span>Installa app</span> 
                             </a>
-                        </span>
-                        <hr>
-                        <span>
+                        </div>
+                        <div class="profile">
                             <a href="#">
                                 <img src="img/profile.svg" alt="download">
-                                    Installa app
+                                <span>John Doe</span> 
                             </a>
-                        </span>
+                        </div>
                     </div>
                 </div>
                 <!-- FINE ASIDE -->
@@ -278,7 +289,7 @@
                     </div>
                 </div>
                 <div class="controller">
-                    <div class="controller-top">
+                    <div class="controller-top text-align-center">
                         <ul>
                             <li><a href="#"></a><i class="fa-solid fa-shuffle fa-xs"></i></li>
                             <li><a href="#"></a><i class="fa-solid fa-backward-step fa-xs"></i></li>
@@ -301,7 +312,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="audio">AUDIO</div>
+                <div class="audio flex">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-list-ul"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-desktop"></i></a>
+                        </li>
+                        <li class="audio-volume flex">
+                            <a href="#"><i class="fas fa-volume-up"></i></a>
+                            <div class="audio-bar">
+                                <div class="time-go">
+                                    <div class="time-start-point"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </body>

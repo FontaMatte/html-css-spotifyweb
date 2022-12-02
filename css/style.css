@@ -72,7 +72,7 @@ ul {
 }
 
 a {
-    color: white;
+    color: #999999;
     text-decoration: none;
 }
 
@@ -108,51 +108,64 @@ section .app {
 
 .nav-aside-top {
     height:calc(100% - 50px);
+    overflow: hidden;
+    flex-direction: column;
 }
 
-.logo {
-    min-height: 60px;
-}
-
-.logo img {
+.logo  .big-logo {
    padding: 1rem;
 }
 
-.lists-container .main-list {
+.logo  .small-logo {
+    display: none;
+    padding: 0.5rem;
+}
+
+.main-list {
     padding:1rem 0;
 }
 
 
-.lists-container .main-list li {
+.main-list li {
     padding: 0.2rem 1rem;
 }
 
-.lists-container .main-list .selected {
+.main-list .selected {
     border-left: 0.2rem solid #adff2f;
-    padding:0.2rem 0.8rem;
+    padding-left: 0.8rem;
 }
 
-.lists-container .main-list img {
-    width: 20%;
+.main-list img {
+    height: 30px;
     vertical-align: middle;
     margin-right: 0.5rem;
     opacity: 0.5;
-  }
-
-.lists-container .secondary-list {
-    min-height: 50px;
-    padding: 1rem;
 }
 
-.lists-container .secondary-list ul li {
+.main-list li a span {
+    vertical-align: middle;
+}
+
+.secondary-list {
+    padding: 1rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.secondary-list ul {
+    height: 100%;
+    overflow: auto;
+}
+
+.secondary-list ul li {
     padding: 0.6rem 0;
 }
 
-.lists-container .secondary-list h3 {
+.secondary-list h3 {
     margin-bottom: 0.4rem;
 }
 
-.lists-container .secondary-list i {
+.secondary-list i {
     margin-right:0.5rem;
     vertical-align: middle;
 }
@@ -165,6 +178,26 @@ section .app {
 .nav-aside-bottom img {
     width: 10%;
     vertical-align: middle;
+}
+
+.nav-aside-bottom span {
+    vertical-align: middle;
+}
+
+.nav-aside-bottom .install {
+    border-bottom: 1px solid #999999;
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+}
+
+.nav-aside-bottom .profile img {
+    background-color: #999999;
+    border-radius: 50%;
+}
+
+.nav-aside-bottom .profile a {
+    color: white;
+    display: block;
 }
 
 
@@ -195,6 +228,7 @@ section .app {
     padding: 0.5rem 2.5rem;
     border-radius: 30px;
     margin-right: 0.5rem;
+    color: white;
 }
 
 .menu-nav-main {
@@ -324,19 +358,90 @@ section .player-container {
     align-items: center;
 }
 
+.controller-bottom .time-go {
+    padding-right: 1rem;
+}
+
+.controller-bottom .time-tot {
+    padding-left: 1rem;
+}
+
 .controller-bottom .time-bar {
     height: 0.3rem;
+    width: 400px;
     border-radius: 0.3rem;
-    background-color: white;
+    background-color:#999999;
     cursor: pointer;
     flex-grow: 1;
 }
 
-/* AUDIO */
-.player-container .audio {
-    border: 1px dashed black;
+.controller-bottom .time-bar .time-start {
+    height:100%;
+    width: 20%;
+    border-radius: 0.3rem;
+    position: relative;
+    background-color: white;
 }
 
+.time-bar .time-start .time-start-point {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    /* display: none; */
+}
+
+/* AUDIO */
+.player-container .audio {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-container .audio .audio-volume {
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.player-container .audio .audio-volume a {
+    padding-right: 0.8rem;
+}
+
+.player-container .audio ul li {
+    display: inline-block;
+}
+
+.audio .audio-volume .audio-bar {
+    height: 0.3rem;
+    width: 50px;
+    border-radius: 0.3rem;
+    background-color:#999999;
+    cursor: pointer;
+    /* flex-grow: 1; */ 
+}
+
+.audio .audio-volume .audio-bar .time-go {
+    height: 100%;
+    width: 20%;
+    border-radius: 0.3rem;
+    background-color: white;
+    position: relative;
+}
+
+.audio-bar .time-go .time-start-point {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    /* display: none; */
+}
 
 /* MEDIUM */
 @media screen and (max-width:1100px) {
@@ -364,5 +469,34 @@ section .player-container {
 
     .main-container {
         width: calc(100% - 50px);
+    }
+
+    .call-to-action {
+        width:calc(100% - 50px);
+    }
+
+    .logo .big-logo {
+        display: none;
+    }
+
+    .logo .small-logo {
+        display:block;
+    }
+
+    .main-list ul li span {
+        display: none;
+    }
+
+    .secondary-list {
+        display: none;
+    }
+
+    .main-list li,
+    .main-list .selected {
+        padding-left: 0.5rem;
+    }
+
+    .main-list .selected {
+        border-left:none;
     }
 }
