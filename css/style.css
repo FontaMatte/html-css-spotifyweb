@@ -11,6 +11,10 @@
     display: flex;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -349,6 +353,7 @@ section .player-container {
 /* SONG */
 .player-container .song {
     padding: 0.5rem;
+    width: 25%;
 }
 
 .player-container .song img {
@@ -382,6 +387,10 @@ section .player-container {
 }
 
 /* CONTROLLER */
+.controller {
+    width: 50%;
+}
+
 .controller-top ul li {
     display: inline-block;
     font-size:2rem;
@@ -407,20 +416,21 @@ section .player-container {
 }
 
 .controller-bottom .time-go {
-    padding-right: 1rem;
+    text-align:right;
+    width: 10%;
 }
 
 .controller-bottom .time-tot {
-    padding-left: 1rem;
+    text-align:left;
+    width: 10%;
 }
 
 .controller-bottom .time-bar {
     height: 0.3rem;
-    width :400px;
+    width: 70%;
     border-radius: 0.3rem;
     background-color:#999999;
     cursor: pointer;
-    flex-grow: 1;
 }
 
 .controller-bottom .time-bar .time-start {
@@ -445,14 +455,16 @@ section .player-container {
 
 /* AUDIO */
 .player-container .audio {
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding-right: 0.6rem;
+    width: 25%;
 }
 
 .player-container .audio .audio-volume {
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
+    width: 50%;
 }
 
 .player-container .audio a {
@@ -461,7 +473,7 @@ section .player-container {
 
 .audio .audio-volume .audio-bar {
     height: 0.2rem;
-    width: 60px;
+    width: 60%;
     border-radius: 0.2rem;
     background-color:#999999;
     cursor: pointer;
