@@ -237,17 +237,13 @@ section .app {
     height: 100%;
     background-color:#141922;
     color: white;
-    padding-top: 60px;
     overflow:auto;
 }
 
 .call-to-action {
-    width:calc(100% - 200px);
-    /* height: 60px; */
+    position: sticky;
     background-color: rgba(0,0,0,0.5);
-    position:fixed;
     top: 0;
-    right: 0;
     text-align: right;
     z-index: 5;
     padding: 1.5rem 0;
